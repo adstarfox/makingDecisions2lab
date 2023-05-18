@@ -72,19 +72,19 @@ var score = 59
 
 //Code Here
 
-// if (score >= 90){
-//   console.log(`You got an A`)
-// } else if (score <= 89 && score >= 80){
-//   console.log(`You got a B`)
-// }else if (score <= 79 && score >= 70){
-//   console.log(`You got a C`)
-// }else if (score <= 69 && score >= 60){
-//   console.log(`You got a D`)
-// }else if (score <60){
-//   console.log(`You got a F`)
-// }else {
-//   console.log(`I can't grade this!`)
-// }
+if (score >= 90){
+  console.log(`You got an A`)
+} else if (score <= 89 && score >= 80){
+  console.log(`You got a B`)
+}else if (score <= 79 && score >= 70){
+  console.log(`You got a C`)
+}else if (score <= 69 && score >= 60){
+  console.log(`You got a D`)
+}else if (score <60){
+  console.log(`You got a F`)
+}else {
+  console.log(`I can't grade this!`)
+}
 
 
 ////////// Intermediate Problems //////////
@@ -156,7 +156,7 @@ for (let i = letters.length; i >= 0; i--){
 // Switch statements can be excellent alternatives to if blocks. Look up switch statements (I recommend W3 Schools) and try to implement one for the following.
 
 // Do not edit the code below.
-let letterGrade = 'B'
+let letterGrade = 'F'
 // Do not edit the code above.
 
 /* Use a switch statement on 'letterGrade' and console.log the appropriate response.
@@ -171,6 +171,29 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 
 //Code Here
 
+let grades = ""
+
+switch(letterGrade) {
+  case `A`:
+    grades = `The student is doing excellently`
+    break;
+  case `B`:
+    grades = `The student is doing well`
+    break;
+  case `C`:
+    grades = `The student is doing alright.`
+    break;
+  case `D`:
+    grades = `The student is not doing very well.`
+    break;
+  case `F`:
+    grades = `The student is failing.`
+    break;        
+  default: 
+    grades = "Not an eligible grade"
+}
+
+console.log (grades)
 
 
 ////////// PROBLEM 11 //////////
@@ -198,3 +221,15 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+
+for (let i = 0; i <= 100; i++){
+  if (i % 15 === 0){
+    console.log(`DevMountain`)
+  }else if (i % 3 === 0){
+    console.log(`Dev`)
+  }else if (i % 5 === 0){
+    console.log(`Mountain`)
+  }else {
+    console.log(i)
+  }
+}
